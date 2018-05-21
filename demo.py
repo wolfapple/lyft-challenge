@@ -29,7 +29,7 @@ for rgb_frame in video:
   # Look for red cars :)
 	binary_car_result = np.where(red>250,1,0).astype('uint8')
   # Look for road :)
-	binary_road_result = binary_car_result = np.where(red<20,1,0).astype('uint8')
+	binary_road_result = np.where(red<20,1,0).astype('uint8')
 	answer_key[frame] = [encode(binary_car_result), encode(binary_road_result)]
   # Increment frame
 	frame+=1
